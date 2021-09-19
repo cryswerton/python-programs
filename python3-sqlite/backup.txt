@@ -1,0 +1,25 @@
+import sqlite3
+
+# connect to database
+conn = sqlite3.connect('customer.db')
+
+# create table
+c.execute(""" CREATE TABLE customers (
+    first_name text,
+    last_name text,
+    email text
+)""")
+
+# create cursor
+c = conn.cursor()
+
+#c.execute("INSERT INTO customers VALUES ('Tim','Depp','tmdepp@gmail.com')")
+
+c.execute("SELECT * FROM customers")
+print(c.fetchall())
+
+# commit a command
+conn.commit()
+
+# close the connecton
+conn.close()
