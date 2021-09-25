@@ -1,0 +1,25 @@
+Create an environment
+
+mkdir myproject
+cd myproject
+python3 -m venv ven
+
+Activate the environment
+
+source ven/bin/activate
+
+Install Flask
+pip install Flask
+
+Deactivate the environment
+
+deactivate
+
+If the file name is app.py just run this command to start the server
+
+flask run
+
+Activate the debug mode to refresh the page automatically
+
+export FLASK_ENV=development
+flask run
